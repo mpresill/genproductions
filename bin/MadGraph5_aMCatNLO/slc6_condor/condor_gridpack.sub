@@ -1,0 +1,11 @@
+request_cpus    = 4
+request_memory  = 8GB
+request_disk    = 20GB
+executable = /afs/cern.ch/work/m/mpresill/genproductions/bin/MadGraph5_aMCatNLO/slc6_condor_v2/generate_gridpack.sh
+output     = /afs/cern.ch/work/m/mpresill/genproductions/bin/MadGraph5_aMCatNLO/slc6_condor_v2/$(ClusterId).out
+error      = /afs/cern.ch/work/m/mpresill/genproductions/bin/MadGraph5_aMCatNLO/slc6_condor_v2/$(ClusterId).out 
+getenv = FALSE
+should_transfer_files = NO 
++JobFlavour = "workday" 
+
+queue 1

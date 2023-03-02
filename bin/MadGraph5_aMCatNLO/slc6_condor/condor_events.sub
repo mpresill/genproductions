@@ -1,0 +1,12 @@
+request_cpus    = 1
+request_memory  = 4GB
+request_disk    = 4GB
+executable = /afs/cern.ch/user/g/grohsjea/public/slc6_condor/generate_events.sh
+output     = /afs/cern.ch/user/g/grohsjea/public/slc6_condor/$(ClusterId).out
+error      = /afs/cern.ch/user/g/grohsjea/public/slc6_condor/$(ClusterId).out 
+getenv = FALSE
+should_transfer_files = NO 
++RequestRuntime  = 3600
++JobFlavour = "workday"
+
+queue 1
