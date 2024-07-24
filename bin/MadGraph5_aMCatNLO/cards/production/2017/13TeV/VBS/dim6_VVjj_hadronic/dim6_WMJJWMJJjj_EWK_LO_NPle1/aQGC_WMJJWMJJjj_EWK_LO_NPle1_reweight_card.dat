@@ -1,0 +1,45 @@
+change helicity False
+change rwgt_dir rwgt
+
+# SM
+launch --rwgt_name=rwgt_1
+   set SMEFT 2 0
+   set SMEFT 4 0
+   set SMEFT 7 0
+ 
+
+# cW=1 
+launch --rwgt_name=rwgt_2
+   set SMEFT 2 1
+   set SMEFT 4 0
+   set SMEFT 7 0
+ 
+# cW=-1 
+launch --rwgt_name=rwgt_3
+   set SMEFT 2 -1
+   set SMEFT 4 0
+   set SMEFT 7 0
+
+# cHbox=1 
+launch --rwgt_name=rwgt_4
+   set SMEFT 2 0
+   set SMEFT 4 1
+   set SMEFT 7 0
+ 
+# cHbox=-1 
+launch --rwgt_name=rwgt_5
+   set SMEFT 2 0
+   set SMEFT 4 -1
+   set SMEFT 7 0
+
+# cHW=1 
+launch --rwgt_name=rwgt_4
+   set SMEFT 2 0
+   set SMEFT 4 0
+   set SMEFT 7 1
+ 
+# cHW=-1 
+launch --rwgt_name=rwgt_5
+   set SMEFT 2 0
+   set SMEFT 4 0
+   set SMEFT 7 -1

@@ -25,7 +25,7 @@ fi
 # tomorrow     = 1 day
 # testmatch    = 3 days
 # nextweek     = 1 week
-CONDOR_JOB_FLAVOUR="nextweek"
+CONDOR_JOB_FLAVOUR="nextweek\nAccountingGroup = cms"
 
 if [[ "${HOSTNAME}" =~ "lxplus" ]] && [[ ! $(pwd) =~ "/afs/" ]]; then
     echo "You are submitting from lxplus and the local directory is not on AFS."
