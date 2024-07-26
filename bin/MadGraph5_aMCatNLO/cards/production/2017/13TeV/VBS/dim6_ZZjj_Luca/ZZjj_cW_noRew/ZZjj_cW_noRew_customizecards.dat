@@ -1,0 +1,15 @@
+set param_card SMEFT 2 1
+set param_card SMEFT 4 0
+set param_card SMEFT 5 0
+set param_card SMEFT 7 0
+set param_card SMEFT 9 0
+set param_card SMEFT 21 0
+set param_card SMEFT 22 0
+set param_card SMEFT 24 0
+set param_card SMEFT 25 0
+set param_card SMEFT 29 0
+set param_card SMEFT 30 0
+set param_card SMEFT 31 0
+set param_card SMEFT 32 0
+set param_card SMEFT 33 0
+set param_card SMEFT 34 0
