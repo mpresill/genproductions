@@ -1,0 +1,65 @@
+change helicity False
+change rwgt_dir rwgt
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~ SM ~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# SM rwgt_0
+launch
+   set SMEFT 2 0
+   set SMEFT 7 0
+   set SMEFT 9 0
+   set SMEFT 5 0
+   set SMEFT 4 0
+   set SMEFT 21 0
+   set SMEFT 22 0
+   set SMEFT 24 0
+   set SMEFT 25 0
+   set SMEFT 29 0
+   set SMEFT 30 0
+   set SMEFT 31 0
+   set SMEFT 32 0
+   set SMEFT 33 0
+   set SMEFT 34 0
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~ cW ~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# cW=-1 rwgt_1.1
+launch
+   set SMEFT 2 -1
+   set SMEFT 7 0
+   set SMEFT 9 0
+   set SMEFT 5 0
+   set SMEFT 4 0
+   set SMEFT 21 0
+   set SMEFT 22 0
+   set SMEFT 24 0
+   set SMEFT 25 0
+   set SMEFT 29 0
+   set SMEFT 30 0
+   set SMEFT 31 0
+   set SMEFT 32 0
+   set SMEFT 33 0
+   set SMEFT 34 0
+
+
+# cW=1 rwgt_1.2
+launch
+   set SMEFT 2 1
+   set SMEFT 7 0
+   set SMEFT 9 0
+   set SMEFT 5 0
+   set SMEFT 4 0
+   set SMEFT 21 0
+   set SMEFT 22 0
+   set SMEFT 24 0
+   set SMEFT 25 0
+   set SMEFT 29 0
+   set SMEFT 30 0
+   set SMEFT 31 0
+   set SMEFT 32 0
+   set SMEFT 33 0
+   set SMEFT 34 0
