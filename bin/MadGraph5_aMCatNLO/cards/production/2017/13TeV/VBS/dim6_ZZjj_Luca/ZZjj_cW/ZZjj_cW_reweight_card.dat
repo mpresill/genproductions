@@ -1,12 +1,8 @@
 change helicity False
 change rwgt_dir rwgt
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~ SM ~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-# SM rwgt_0
-launch
+# SM
+launch --rwgt_name=rwgt_1
    set SMEFT 2 0
    set SMEFT 7 0
    set SMEFT 9 0
@@ -23,13 +19,9 @@ launch
    set SMEFT 33 0
    set SMEFT 34 0
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~ cW ~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-# cW=-1 rwgt_1.1
-launch
-   set SMEFT 2 -1
+# cW=1
+launch --rwgt_name=rwgt_2
+   set SMEFT 2 1
    set SMEFT 7 0
    set SMEFT 9 0
    set SMEFT 5 0
@@ -46,9 +38,9 @@ launch
    set SMEFT 34 0
 
 
-# cW=1 rwgt_1.2
-launch
-   set SMEFT 2 1
+# cW=-1
+launch --rwgt_name=rwgt_3
+   set SMEFT 2 -1
    set SMEFT 7 0
    set SMEFT 9 0
    set SMEFT 5 0
