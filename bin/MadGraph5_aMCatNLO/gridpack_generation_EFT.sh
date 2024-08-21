@@ -259,8 +259,10 @@ make_gridpack () {
       tar xavf ../SMEFTsim_topU3l_MwScheme_UFO.tar.gz
       cd SMEFTsim_topU3l_MwScheme_UFO
       echo "EFT model is here: $(pwd)"
-        # wget all restrictions
+        # wget all restrict cards in my web folder
       wget --no-check-certificate https://etpwww.etp.kit.edu/~mpresill/generators/restrict_cW_b_massless.dat
+      wget --no-check-certificate https://etpwww.etp.kit.edu/~mpresill/generators/restrict_cW_cHW_cHbox_b_massless.dat
+      wget --no-check-certificate https://etpwww.etp.kit.edu/~mpresill/generators/restrict_VBS_WZ_massless.dat
       cd ../.. 
       
       if [ -e $CARDSDIR/${name}_extramodels.dat ]; then
@@ -606,13 +608,32 @@ make_gridpack () {
       echo "cleaning temporary gridpack"
       rm $WORKDIR/pilotrun_gridpack.tar.gz
 
+      echo "-------- MATTEO: we are here and we are trying to reweight now -----------"
+      
+
+
       # precompile reweighting if necessary
       if [ -e $CARDSDIR/${name}_reweight_card.dat ]; then
+          # MATTEO: adding the source of the virtual environment with the correct numpy version
+          #set +u
+          #source /work/mpresill/genproductions/bin/MadGraph5_aMCatNLO/venvForReweighting/bin/activate
+          #set -u
           echo "preparing reweighting step"
+          echo " +++++++ i problemi iniziatno qui +++"
+          echo "path di python " $PYTHONPATH
+          echo "path delle librerie di python " $LD_LIBRARY_PATH
+          
+
           prepare_reweight $isnlo $WORKDIR $scram_arch $CARDSDIR/${name}_reweight_card.dat
+          echo " OK REW COMPLETED ----------------------------------"
+          # deactivate the virtual environment 
+          #deactivate
+          #echo " here I have to deactivate before next command -------"
+          # end of my patch
 	  extract_width $isnlo $WORKDIR $CARDSDIR ${name}
       fi
       
+
       #prepare madspin grids if necessary
       if [ -e $CARDSDIR/${name}_madspin_card.dat ]; then
         echo "import $WORKDIR/unweighted_events.lhe.gz" > madspinrun.dat
